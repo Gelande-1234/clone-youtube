@@ -105,6 +105,58 @@
         .videos.active {
             margin-left: 0;
         }
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #ff0000;
+        padding: 10px 20px;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .search-bar {
+        flex: 1;
+        margin: 0 20px;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .icon {
+        border: none;
+        background: white;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* Contenu principal */
+    main {
+        margin-top: 60px;
+        /* Espace sous la barre de navigation */
+        padding-left: 20px;
+    }
+
+    /* Quand le menu est ouvert */
+    .sidebar.active {
+        left: 0;
+    }
     </style>
 </head>
 
