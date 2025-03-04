@@ -143,6 +143,28 @@
     .sidebar.active {
         left: 0;
     }
+    main {
+        margin-top: 60px;
+        display: flex;
+        padding-left: 20px;
+    }
+    .videos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            margin-left: 250px;
+           
+        }
+
+        .video {
+            width: 300px;
+        }
+
+        .video img {
+            width: 100%;
+            border-radius: 5px;
+        }
 </style>
 
 <body>
@@ -172,6 +194,30 @@
             <button class="icon profile" style="border-radius: 10px;font-size: 20px; background-color: rgb(249, 248, 248);">👤</button>
         </div>
     </nav>
+    <main>
+        <section class="videos">
+            <div class="video">
+                <img src="imagev.jpeg" alt="Vidéo 1">
+                <h3>Titre de la vidéo</h3>
+                <p>1M vues • il y a 3 jours</p>
+            </div>
+            <div class="video">
+                <img src="havana.jpg" alt="Vidéo 2">
+                <h3>Autre vidéo intéressante</h3>
+                <p>500K vues • il y a 1 semaine</p>
+            </div>
+            <div class="video">
+                <img src="oceane.jpg" alt="Vidéo 2">
+                <h3>Autre vidéo intéressante</h3>
+                <p>500K vues • il y a 1 semaine</p>
+            </div>
+            <div class="video">
+                <img src="kerry.jpg" alt="Vidéo 2">
+                <h3>Autre vidéo intéressante</h3>
+                <p>500K vues • il y a 1 semaine</p>
+            </div>
+        </section>
+    </main>
 
 
 
@@ -180,9 +226,15 @@
         crossorigin="anonymous"></script>
     <script>
         function toggleMenu() {
-            let sidebar = document.querySelector(".sidebar");
-            sidebar.classList.toggle("active");
-        }
+    let sidebar = document.querySelector(".sidebar");
+    let header = document.querySelector("header");
+    let videos = document.querySelector(".videos");
+
+    sidebar.classList.toggle("active");
+    header.classList.toggle("active");
+    videos.classList.toggle("active");
+}
+        
     </script>
 </body>
 
