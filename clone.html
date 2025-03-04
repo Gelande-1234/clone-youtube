@@ -64,7 +64,7 @@
 
 
     .sidebar {
-        width: 250px;
+        width: 200px;
         background: #222;
         color: white;
         height: 100vh;
@@ -143,28 +143,36 @@
     .sidebar.active {
         left: 0;
     }
+
     main {
         margin-top: 60px;
         display: flex;
-        padding-left: 20px;
+        padding-left: 250px;
     }
+
     .videos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 20px;
-            margin-left: 250px;
-           
-        }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        /* Espacement entre les vidéos */
+    }
 
-        .video {
-            width: 300px;
-        }
+    .video {
+        width: 200px;
+        /* Ajustez la largeur selon votre mise en page */
+        text-align: center;
+    }
 
-        .video img {
-            width: 100%;
-            border-radius: 5px;
-        }
+    .video img {
+        width: 100%;
+        /* Remplit la largeur du conteneur */
+        height: 150px;
+        /* Fixe la hauteur */
+        object-fit: cover;
+        /* Recadre l'image pour qu'elle s'adapte */
+        border-radius: 10px;
+        /* Coins arrondis pour un meilleur rendu */
+    }
 </style>
 
 <body>
@@ -183,15 +191,18 @@
         <div class="logo">
             <img src="pngegg.png" alt="logo" style="width: 30px; height: 30px;">
             <span style="color: red;"><strong>YOUTUBE CLONE</strong></span>
-            
+
         </div>
         <input type="text" class="search-bar" placeholder="Rechercher...">
         <div class="icons">
-            <button class="icon micro" style="border-radius: 10px;font-size: 20px; background-color: rgb(249, 243, 243);"><i
+            <button class="icon micro"
+                style="border-radius: 10px;font-size: 20px; background-color: rgb(249, 243, 243);"><i
                     class="fa-solid fa-microphone"></i></button>
             <button class="icon gear" style="border-radius: 10px;font-size: 20px;background-color:white;">⚙️</button>
-            <button class="icon notifications" style="border-radius: 10px;font-size: 20px;background-color: rgb(247, 244, 244);">🔔</button>
-            <button class="icon profile" style="border-radius: 10px;font-size: 20px; background-color: rgb(249, 248, 248);">👤</button>
+            <button class="icon notifications"
+                style="border-radius: 10px;font-size: 20px;background-color: rgb(247, 244, 244);">🔔</button>
+            <button class="icon profile"
+                style="border-radius: 10px;font-size: 20px; background-color: rgb(249, 248, 248);">👤</button>
         </div>
     </nav>
     <main>
@@ -226,15 +237,15 @@
         crossorigin="anonymous"></script>
     <script>
         function toggleMenu() {
-    let sidebar = document.querySelector(".sidebar");
-    let header = document.querySelector("header");
-    let videos = document.querySelector(".videos");
+            let sidebar = document.querySelector(".sidebar");
+            let header = document.querySelector("header");
+            let videos = document.querySelector(".videos");
 
-    sidebar.classList.toggle("active");
-    header.classList.toggle("active");
-    videos.classList.toggle("active");
-}
-        
+            sidebar.classList.toggle("active");
+            header.classList.toggle("active");
+            videos.classList.toggle("active");
+        }
+
     </script>
 </body>
 
